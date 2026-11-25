@@ -1,0 +1,10 @@
+resources:
+  jobs:
+    sales_processing_job:
+      name: sales-processing-job
+      queue:
+        enabled: true
+      tasks:
+        - notebook_task:
+            notebook_path: ../sales-data-notebook.ipynb
+          task_key: process_sales_data
